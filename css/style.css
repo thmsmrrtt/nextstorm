@@ -1,0 +1,53 @@
+body {
+  margin: 0px;
+  font-family: "Roboto";
+ 
+}
+
+.header {
+  padding: 0 45px;
+  background-color: #EE9701;
+  color: #FFF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  font-family: "Fredoka One";
+}
+
+.nav a {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 10px 10px;
+  display: block;
+  transistion: all 0.3s ease-out;
+}
+
+.nav a:hover {
+  color: #f2cc4d;
+}
+
+.nav {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+}
+
+.nav li {
+  margin-left: 20px;
+}
+
+.hero {
+  background-color: #FAE9B1;
+  padding: 60px 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-inner {
+  max-width: 650px;
+}
