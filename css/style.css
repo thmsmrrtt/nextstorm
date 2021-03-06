@@ -1,7 +1,6 @@
 body {
   margin: 0px;
   font-family: "Roboto";
- 
 }
 
 .header {
@@ -42,12 +41,51 @@ h1 {
 
 .hero {
   background-color: #FAE9B1;
-  padding: 60px 45px;
+  padding: 40px 40px;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 80vh;
 }
 
 .hero-inner {
+  flex:50%;
   max-width: 650px;
+}
+
+.hero-image {
+  flex:50%;
+  justify-content: center;
+  text-align: center;
+  margin: 10px;
+}
+
+btn {
+  padding: 10px;
+  background-color: #FFF;
+  border-radius: 10px;
+}
+
+btn a {
+  text-decoration: none;
+  color: #000;
+}
+
+.when {
+  padding: 40px 40px;
+  display: flex;
+}
+
+.date {
+  flex: 50%;
+  text-align: center;
+}
+
+.countdown {
+  flex:50%;
+  text-align: center;
+  background: #EE9701;
+  border-radius: 100%;
+  height: 250px;
+  width: 250px;
 }

@@ -1,6 +1,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Roboto&display=swap" rel="stylesheet">
-<link type="text/css" href="./css/style.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+
 
 <div class="header">
   
@@ -17,20 +18,59 @@
   <div class="hero-inner"> 
  <h1>You're Invited to Our Wedding!</h1>
  <p>From here you will be able to find out everything about the wedding that is planned (so far, you may have to check back occasionally for some stuff) and you will be able to RSVP.</p>
-  <btn><a href="#RSVP">RSVP Now</a></btn>
+    <btn><a href="#RSVP">RSVP Now</a></btn>
   </div> 
   <div class="hero-image">
-    
-    <svg viewBox="0 0 250 250" xmlns="http://www.w3.org/2000/svg">
-		<defs>
-			<clipPath id="user-space" clipPathUnits="userSpaceOnUse">
-<path fill="#FF0066" d="M49.5,-65.4C58.2,-51.8,55.1,-30.5,54.2,-12.9C53.4,4.7,54.7,18.5,49.1,28.6C43.6,38.6,31.1,44.8,17.6,50.9C4.1,57,-10.5,62.8,-22.5,59.5C-34.5,56.1,-44.1,43.5,-53.7,29.7C-63.3,15.8,-73,0.6,-73.4,-15.7C-73.8,-32,-65,-49.4,-51.2,-62.2C-37.4,-75,-18.7,-83.1,0.9,-84.1C20.4,-85.2,40.9,-79.1,49.5,-65.4Z" transform="translate(100 100)"
-			</clipPath>
-		</defs>
-
-		<image width="500px" preserveAspectRatio="xMinYMin slice" xlink:href="https://res.cloudinary.com/worldpackers/image/upload/c_fill,f_auto,q_auto,w_1024/v1/guides/article_cover/mlev4ob8jhsmgmdq9cqn.jpg" clip-path="url(#user-space)"/>
-	</svg>
-    
+  
+  <img src="https://www.auszac.com/wp/wp-content/uploads/2017/04/circle-placeholder.png">
   </div>
+  
 </div>
 
+
+<div class="when" id="when">
+  <div class="date">
+    <h2>When is the Wedding?</h2>
+    <h3>6th October 2022</h3>
+  </div>
+  <div class="countdown">
+    <h2>How Long Is That?</h2>
+    <p id="countdown"></p>
+  </div>
+
+</div>
+
+
+
+
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Oct 6, 2022 12:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("countdown").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
